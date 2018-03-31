@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jackson.btconnect.Control">
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="347dp"
+        android:layout_height="48dp"
+        android:text="DISCONNECT"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/recvTextView"
+        android:layout_width="345dp"
+        android:text=""
+        android:textColor="#000000"
+        android:scrollbars = "vertical"
+        android:includeFontPadding="false"
+
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:gravity="top"
+        android:imeOptions="actionDone"
+
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReceivedLabel"
+        app:layout_constraintHorizontal_bias="0.512" />
+
+    <TextView
+        android:id="@+id/ReceivedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Received:"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintBottom_toTopOf="@+id/recvTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recvTextView"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="267dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:imeOptions="actionSend"
+        app:layout_constraintRight_toLeftOf="@+id/sendButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ReceivedLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
